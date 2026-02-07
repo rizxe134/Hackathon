@@ -50,8 +50,8 @@ except KeyboardInterrupt:
     print("Measurement stopped by user")
     GPIO.cleanup()
 
-//HC-SR04 Pin	Raspberry Pi Pin	Notes
-//VCC	Pin 2 (5V)	Power
-//TRIG	Pin 16 (GPIO 23)	Trigger signal
-//ECHO	Through Resistors to Pin 18 (GPIO 24)	Use 1kΩ and 2kΩ resistors
-//GND	Pin 6 (GND)	Ground
+#HC-SR04 Pin	Raspberry Pi Pin	Notes
+#VCC	Pin 2 (5V)	Power
+#TRIG	Pin 16 (GPIO 23)	Trigger signal
+#ECHO	Through Resistors to Pin 18 (GPIO 24)	Use 1kΩ and 2kΩ resistors
+#GND	Pin 6 (GND)	Ground
