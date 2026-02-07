@@ -1,0 +1,26 @@
+from google import genai
+from google.genai import types
+import PIL.Image
+
+# 1. Setup the Client
+# Replace with your actual API key or set it as an environment variable
+client = genai.Client(api_key="YOUR_GEMINI_API_KEY")
+
+# 2. Load your image
+# Make sure the file path is correct
+img = PIL.Image.open('object_to_identify.jpg')
+
+# 3. Ask Gemini to identify the object
+# You can be very specific with your prompt
+response = client.models.generate_content(
+    model="gemini-2.0-flash",
+    contents=[
+        "Identify the main objects in this image and provide a brief description of each.", 
+        img
+    ]
+)
+
+print("-" * 30)
+print("GEMINI IDENTIFICATION:")
+print(response.text)
+print("-" * 30)
